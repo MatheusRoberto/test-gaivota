@@ -1,0 +1,251 @@
+swagger: "2.0"
+info:
+  description: "API desenvolvida para teste de Backend da Gaivota"
+  version: "1.0.0"
+  title: "Gaivota Test Backend"
+host: "localhost:5000"
+basePath: "/api/v1"
+tags:
+
+- name: "Farm NVDI"
+  description: ""
+
+- name: "Auth"
+  description: ""
+
+- name: "Farm"
+  description: ""
+
+- name: "Farm Precipitation"
+  description: ""
+
+- name: ""
+  description: ""
+
+schemes:
+- ""
+paths:
+  /farmnvdi/:
+    get:
+      tags:
+      - "Farm NVDI"
+      summary: "List"
+      responses:
+        200:
+          description: "successful operation"
+  /farmnvdi/:farmnvdiID:
+    get:
+      tags:
+      - "Farm NVDI"
+      summary: "Get By Id"
+      responses:
+        200:
+          description: "successful operation"
+    put:
+      tags:
+      - "Farm NVDI"
+      summary: "Update"
+      consumes:
+        - "application/json"
+      parameters:
+      - name: "Content-Type"
+        in: "header"
+        type: "string"
+        description: ""
+        required: true
+      responses:
+        200:
+          description: "successful operation"
+    delete:
+      tags:
+      - "Farm NVDI"
+      summary: "Delete"
+      responses:
+        200:
+          description: "successful operation"
+  /farmnvdi/csv:
+    post:
+      tags:
+      - "Farm NVDI"
+      summary: "Create CSV"
+      consumes:
+        - "multipart/form-data"
+      parameters:
+      - name: "csv"
+        in: "formData"
+        type: "string"
+        description: ""
+        required: true
+      - name: "Content-Type"
+        in: "header"
+        type: "string"
+        description: ""
+        required: true
+      responses:
+        200:
+          description: "successful operation"
+  /farmnvdi?skip=100&amp;limit=100:
+    get:
+      tags:
+      - "Farm NVDI"
+      summary: "List Query"
+      responses:
+        200:
+          description: "successful operation"
+  /auth:
+    get:
+      tags:
+      - "Auth"
+      summary: "Authorization"
+      responses:
+        200:
+          description: "successful operation"
+  /farm:
+    get:
+      tags:
+      - "Farm"
+      summary: "List"
+      responses:
+        200:
+          description: "successful operation"
+  /farm/:farmID:
+    get:
+      tags:
+      - "Farm"
+      summary: "Get By Id"
+      responses:
+        200:
+          description: "successful operation"
+    put:
+      tags:
+      - "Farm"
+      summary: "Update"
+      consumes:
+        - "application/json"
+      parameters:
+      - name: "Content-Type"
+        in: "header"
+        type: "string"
+        description: ""
+        required: true
+      responses:
+        200:
+          description: "successful operation"
+    delete:
+      tags:
+      - "Farm"
+      summary: "Delete"
+      responses:
+        200:
+          description: "successful operation"
+  /farm/csv:
+    post:
+      tags:
+      - "Farm"
+      summary: "Create CSV"
+      consumes:
+        - "multipart/form-data"
+      parameters:
+      - name: "csv"
+        in: "formData"
+        type: "string"
+        description: ""
+        required: true
+      - name: "Content-Type"
+        in: "header"
+        type: "string"
+        description: ""
+        required: true
+      responses:
+        200:
+          description: "successful operation"
+  /farm?skip=0&amp;limit=100:
+    get:
+      tags:
+      - "Farm"
+      summary: "List Query"
+      responses:
+        200:
+          description: "successful operation"
+  /farmprecipitation/:
+    get:
+      tags:
+      - "Farm Precipitation"
+      summary: "List"
+      responses:
+        200:
+          description: "successful operation"
+  /farmprecipitation/:farmprecipitationID:
+    get:
+      tags:
+      - "Farm Precipitation"
+      summary: "Get By Id"
+      responses:
+        200:
+          description: "successful operation"
+    put:
+      tags:
+      - "Farm Precipitation"
+      summary: "Update"
+      consumes:
+        - "application/json"
+      parameters:
+      - name: "Content-Type"
+        in: "header"
+        type: "string"
+        description: ""
+        required: true
+      responses:
+        200:
+          description: "successful operation"
+    delete:
+      tags:
+      - "Farm Precipitation"
+      summary: "Delete"
+      responses:
+        200:
+          description: "successful operation"
+  /farmprecipitation/csv:
+    post:
+      tags:
+      - "Farm Precipitation"
+      summary: "Create CSV"
+      consumes:
+        - "multipart/form-data"
+      parameters:
+      - name: "csv"
+        in: "formData"
+        type: "string"
+        description: ""
+        required: true
+      - name: "Content-Type"
+        in: "header"
+        type: "string"
+        description: ""
+        required: true
+      responses:
+        200:
+          description: "successful operation"
+  /farmprecipitation?skip=0&amp;limit=100:
+    get:
+      tags:
+      - "Farm Precipitation"
+      summary: "List Query"
+      responses:
+        200:
+          description: "successful operation"
+    get:
+      tags:
+      - ""
+      summary: "Health Check"
+      responses:
+        200:
+          description: "successful operation"
+  /not:
+    get:
+      tags:
+      - ""
+      summary: "Not Found"
+      responses:
+        200:
+          description: "successful operation"
